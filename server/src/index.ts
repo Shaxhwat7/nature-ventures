@@ -11,7 +11,12 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 app.use('/', adminRouter)
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://admin:admin123@cluster0.2e2op.mongodb.net/'; 
+const MONGODB_URI = process.env.MONGODB_URI; 
+
+if (!MONGODB_URI) {
+  console.error('MONGODB_URI is not set. Please set process.env.MONGODB_URI and restart the server.');
+  process.exit(1);
+}
 
 mongoose
   .connect(MONGODB_URI)

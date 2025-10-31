@@ -32,7 +32,7 @@ export default function ExperienceDetails() {
 
   useEffect(() => {
     axios
-      .get<{ experience: Experience; slots: TimeSlot[] }>(`http://localhost:3001/experiences/${id}`)
+      .get<{ experience: Experience; slots: TimeSlot[] }>(`${import.meta.env}/experiences/${id}`)
       .then((res) => {
         setExperience(res.data.experience);
       })
@@ -41,7 +41,7 @@ export default function ExperienceDetails() {
 
   useEffect(() => {
     axios
-      .get<TimeSlot[]>(`http://localhost:3001/experiences/${id}/slots`)
+      .get<TimeSlot[]>(`${import.meta.env}/experiences/${id}/slots`)
       .then((res) => {
         const data = res.data;
 
