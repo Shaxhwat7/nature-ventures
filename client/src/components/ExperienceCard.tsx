@@ -9,7 +9,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 <Link to={`/experience/${experience.id}`}>
   <div className="w-[280px] h-[312px] bg-white rounded-xl overflow-hidden flex flex-col">
     <img
-      src={experience.image}
+      src={`${import.meta.env.VITE_BACKEND_URL}${experience.image}`}
       alt=""
       className="w-full h-[170px] object-cover"
     />
