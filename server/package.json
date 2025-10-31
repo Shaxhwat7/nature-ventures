@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@types/mongoose": "^5.11.96",
+    "@types/multer": "^2.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.19.2",
+    "multer": "^2.0.2",
+    "typescript": "^5.9.3"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^22.7.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "start": "node ./dist/index.js",
+    "dev": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
