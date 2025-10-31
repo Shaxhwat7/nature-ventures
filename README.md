@@ -60,3 +60,106 @@ Follow these steps to set up the project locally:
 
 ```bash
 git clone https://github.com/Shaxhwat7/nature-ventures.git
+cd nature-ventures
+cd frontend
+npm install
+
+cd ../backend
+npm install
+cd backend
+npm run dev
+cd frontend
+npm run dev
+▶️ Running Locally
+Start Backend
+cd backend
+npm run dev
+
+
+Backend will run on → http://localhost:3001
+
+Start Frontend
+cd frontend
+npm run dev
+
+
+Frontend will run on → http://localhost:3000
+
+🌍 Environment Variables
+Backend (.env)
+PORT=3001
+MONGODB_URI=your_mongodb_connection_string
+
+Frontend (.env)
+VITE_BACKEND_URL=https://nature-ventures.onrender.com
+
+🧪 API Endpoints
+Method	Endpoint	Description
+GET	/api/experiences	Get all experiences
+GET	/api/experiences/:id	Get specific experience
+POST	/api/bookings	Create new booking
+GET	/uploads/:imageName	Fetch uploaded images
+📂 Project Structure
+nature-ventures/
+│
+├── backend/
+│   ├── server.ts
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   ├── uploads/
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── lib/
+│   │   ├── api/
+│   │   ├── hooks/
+│   │   └── assets/
+│   ├── vite.config.ts
+│   └── package.json
+│
+└── README.md
+
+🚀 Deployment
+Service	URL
+Frontend (Vercel)	https://nature-ventures.vercel.app
+
+Backend (Render)	https://nature-ventures.onrender.com
+💡 Future Enhancements
+
+🔐 Add JWT-based authentication
+
+🧾 Admin dashboard for managing experiences and slots
+
+💬 User reviews and ratings
+
+☁️ Cloud image storage (Cloudinary / AWS S3)
+
+🗺️ Map-based location view
+
+🤝 Contributing
+
+Fork the repository
+
+Create a new branch (feature/your-feature-name)
+
+Commit your changes
+
+Push to your branch
+
+Create a pull request
+
+📜 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Shashwat Sharma
+🔗 GitHub
+
+🔗 LinkedIn
+
