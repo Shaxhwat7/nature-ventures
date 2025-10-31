@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.BACKEND_URL
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 export const api = axios.create({
   baseURL: BASE_URL,
@@ -198,6 +199,6 @@ export const createBooking = async (booking: BookingRequest): Promise<BookingRes
 };
 
 export async function decrementSlot(slotId: string) {
-  const res = await axios.put(`${import.meta.env}/slots/${slotId}/decrement`);
+  const res = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/slots/${slotId}/decrement`);
   return res.data;
 }
